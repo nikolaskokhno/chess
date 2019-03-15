@@ -37,3 +37,17 @@ let currentX = excel[a].getAttribute('posX');
 let currentY = excel[a].getAttribute('posY');
 console.log(currentX, currentY);
 
+function nextStep() {
+	let vars = [document.querySelector('[posX="'+(+currentX +1) +'"][posY="'+(+currentY +2) +'"]'),
+	document.querySelector('[posX="'+(+currentX +2) +'"][posY="'+(+currentY +1) +'"]'),
+	document.querySelector('[posX="'+(+currentX +2) +'"][posY="'+(+currentY -1) +'"]'),
+	document.querySelector('[posX="'+(+currentX +1) +'"][posY="'+(+currentY -2) +'"]'),
+	document.querySelector('[posX="'+(+currentX -1) +'"][posY="'+(+currentY -2) +'"]'),
+	document.querySelector('[posX="'+(+currentX -2) +'"][posY="'+(+currentY -1) +'"]'),
+	document.querySelector('[posX="'+(+currentX -2) +'"][posY="'+(+currentY +1) +'"]'),
+	document.querySelector('[posX="'+(+currentX -1) +'"][posY="'+(+currentY +2) +'"]')];
+
+	console.log(vars);
+}
+
+nextStep();

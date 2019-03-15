@@ -24,3 +24,16 @@ for(let i=0; i<excel.length; i++){
 		excel[i].style.backgroundColor = "#6b3100";
 	}
 }
+
+// коня в рандомное место
+
+let a = Math.round(Math.random()*63);
+excel[a].classList.add('current');
+excel[a].classList.add('set');
+let step = 1;
+excel[a].innerHTML = step;
+
+let currentX = excel[a].getAttribute('posX');
+let currentY = excel[a].getAttribute('posY');
+console.log(currentX, currentY);
+
